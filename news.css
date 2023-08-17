@@ -1,0 +1,53 @@
+.grid {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    margin: 5px;
+    background-color: lavenderblush;
+}
+#n1 {
+    margin: 10px;
+    padding: 5px;
+    background-color: paleturquoise;
+}
+#n2 {
+    margin: 10px;
+    padding: 5px;
+    background-color: lightgreen;
+}
+#n3 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(231, 148, 93);
+}
+#n4 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(184, 140, 244);
+}
+#n5 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(228, 219, 143);
+}
+#n6 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(243, 188, 218);
+}
+#n7 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(152, 151, 151);
+}
+#n8 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(210, 157, 130);
+}
+#n9 {
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(218, 238, 139);
+}

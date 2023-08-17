@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+       .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: beige;
+        opacity: 0.9;
+        padding-top: 50px;
+       }
+       .mcont {
+        float: inline-end;
+        background-color: rgb(180, 160, 123);
+        margin: 5px auto;
+        border: 1px solid black;
+        width: 80%;
+       }
+       .imgcont {
+        margin: 2px;
+        text-align: right;
+       }
+       .avatar {
+        border-radius: 50px;
+        
+       }
+       .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+       }
+       .close:hover, .close:focus {
+        color: red;
+        cursor: pointer;
+       }
+       .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+       }
+       @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)}
+        to {-webkit-transform: scale(1)}
+      }
+      
+      @keyframes animatezoom {
+        from {transform: scale(0)}
+        to {transform: scale(1)}
+      }
+    </style>
+</head>
+<body>
+   <button onclick="document.getElementById('demo').style.display='block'">Login</button>    
+   <div id="demo" class="modal">
+    <span onclick="document.getElementById('demo').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="mcont animate" action="/action_page.php">
+        <div class="imgcont">
+            <img src="data:image/jpeg;base64,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" alt="" class="avatar">
+        </div>
+    
+    <div class="container">
+        <label for="uname">Username</label>
+        <input type="text" placeholder="Enter username" name="uname" required><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="text" placeholder="Enter password" name="psw" required><br>
+        <button type="submit">Login</button><br>
+        <label>
+           <input type="checkbox" checked="checked" name="remember">Remember me
+        </label>
+    </div>
+    <div class="container" style="background-color: rgb(123, 99, 77);">
+        <button type="button" onclick="document.getElementById('demo').style.display='none'" class="cancelbtn">Cancel</button><br>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+    </div> 
+    </form> 
+   </div>
+</body>
+<script>
+    var modal = document.getElementById('demo');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</html>

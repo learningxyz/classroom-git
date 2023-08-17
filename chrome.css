@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 10px;
+    min-width: 400px;
+}
+#inp {
+    width: 100%; /*takes extra 10px thus goes out of frame*/
+    padding: 6px;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+#inputbtn {
+    margin: 8px;
+    padding: 8px;
+    background: green;
+    font-weight: bold;
+    color: white;
+}
+ul {
+    list-style: none;
+    padding: 2px;
+}
+li a {
+    color: green;
+    font-size: 18px;
+}
